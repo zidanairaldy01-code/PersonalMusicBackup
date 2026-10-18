@@ -21,15 +21,41 @@ Karena ini **pure static HTML/JavaScript**, Anda **TIDAK PERLU** menambahkan env
 
 1. **Buka Vercel:** https://vercel.com
 2. **Login** dengan GitHub account Anda
-3. **Click "Add New Project"**
+3. **Click "Add New Project"** (atau "Import Project")
 4. **Import repository:** `zidanairaldy01-code/PersonalMusicBackup`
-5. **Framework Preset:** Pilih "Other" atau biarkan default
-6. **Root Directory:** Biarkan default (root)
-7. **Build Command:** Kosongkan atau biarkan default
-8. **Output Directory:** Biarkan default
-9. **Click "Deploy"** 
+5. **Configure Project:**
+   - **Framework Preset:** Other
+   - **Root Directory:** `.` (biarkan default)
+   - **Build Command:** Kosongkan atau hapus
+   - **Output Directory:** `public` ⚠️ **PENTING!**
+   - **Install Command:** Kosongkan atau hapus
+6. **Environment Variables:** Lewati (tidak perlu)
+7. **Click "Deploy"** 
 
 ✅ **Done!** Tunggu 1-2 menit, aplikasi akan live!
+
+---
+
+## ⚠️ FIX 404 ERROR
+
+Jika masih 404 setelah deploy, lakukan ini:
+
+### **Di Vercel Dashboard:**
+
+1. Pergi ke **Project Settings**
+2. Klik **General** di sidebar
+3. Scroll ke **Build & Development Settings**
+4. Set nilai berikut:
+   - **Framework Preset:** Other
+   - **Build Command:** (kosongkan)
+   - **Output Directory:** `public` ⬅️ **HARUS INI!**
+   - **Install Command:** (kosongkan)
+5. **Save** perubahan
+6. Pergi ke **Deployments** tab
+7. Klik tiga titik (...) pada deployment terakhir
+8. Klik **Redeploy**
+
+✅ Sekarang seharusnya jalan!
 
 ---
 
