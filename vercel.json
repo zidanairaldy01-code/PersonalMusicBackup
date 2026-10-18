@@ -1,14 +1,19 @@
 {
-  "buildCommand": "echo 'No build needed'",
-  "outputDirectory": "public",
   "rewrites": [
     {
       "source": "/",
-      "destination": "/index-static.html"
-    },
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
     {
-      "source": "/(.*)",
-      "destination": "/$1"
+      "source": "/storage/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     }
   ]
 }
